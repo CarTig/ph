@@ -1,0 +1,47 @@
+<nav class="
+    relative
+    w-full
+    flex flex-wrap
+    items-center
+    justify-between
+    py-4
+    bg-white
+    text-brown
+    hover:text-green
+    shadow-lg
+    <!-- navbar navbar-expand-lg navbar-light -->
+    ">
+    <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6 md:text-xl">
+        <div class="flex ">
+          <ul class="flex">
+            <li>
+              <a class="" href="{{ path('app_home')}}">Accueil</a>
+            </li>
+            <li>
+              <a class="" href="{{ path('app_programme')}}">Programme</a>
+            </li>
+          </ul>
+        </div>
+
+        <div >
+          <ul class="flex">
+            {% if app.user %}
+              <li> 
+                <a class="" href="#">Mon compte</a>
+              </li>
+              <li> 
+                <a class="" href="{{ path('app_logout')}}">Me déconnecter</a>
+              </li>
+            {% else %}
+              <li> 
+                <a class="" href="{{ path('app_login')}}">Me connecter</a>
+              </li>
+              <li> 
+                <a class="" href="{{ path('app_register')}}">M'inscrire</a>
+              </li>
+            {% endif %}  
+          </ul>
+        </div>
+        
+    </div>
+  </nav>
