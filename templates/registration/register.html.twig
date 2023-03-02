@@ -3,31 +3,40 @@
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <section>
-        <h1>Inscription</h1>
+    <section class="flex justify-center text-brown my-6">
+        <div class="flex flex-col">    
+            <div >
+                <h1 class="text-center text-3xl mb-3">Inscription</h1>
+            </div>
+            <div>
+                {{ form_start(registrationForm) }}
+                    <fieldset class="mb-3"> 
+                        <legend class="text-2xl">Votre identité</legend> 
+                        <div class="">
+                            {{ form_row(registrationForm.name, {
+                                label: 'Nom'
+                            }) }}
+                        </div>
+                        <div>
+                        {{ form_row(registrationForm.email, {
+                            label: 'Email'
+                        }) }}
+                        </div>
+                        <div>
+                        {{ form_row(registrationForm.plainPassword, {
+                            label: 'Mot de passe'
+                        }) }}
+                        </div>
+                    </fieldset>
 
-        {{ form_start(registrationForm) }}
-            <fieldset> 
-                <legend>Votre identité</legend> 
-                {{ form_row(registrationForm.name, {
-                    label: 'Nom'
-                }) }}
+                    <fieldset>
+                        <legend class="text-2xl">Notre confidentialité</legend> 
+                        {{ form_row(registrationForm.ConsentementRGPD) }}
+                    </fieldset>
 
-                {{ form_row(registrationForm.email, {
-                    label: 'Email'
-                }) }}
-
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Mot de passe'
-                }) }}
-            </fieldset>
-
-            <fieldset>
-                <legend>Notre confidentialité</legend> 
-                {{ form_row(registrationForm.ConsentementRGPD) }}
-            </fieldset>
-
-            <button type="submit" class="btn">S'inscrire</button>
-        {{ form_end(registrationForm) }}
+                    <button type="submit" class="rounded-full bg-green text-white">S'inscrire</button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>    
     </section>
 {% endblock %}

@@ -5,9 +5,7 @@
 {% block body %}
 
 
-
-
-<header>
+{# test du HEADER <header>
   <div
     class="relative overflow-hidden bg-cover bg-no-repeat"
     style="
@@ -33,7 +31,7 @@
       </div>
     </div>
   </div>
-</header>
+</header> #}
 
 
 
@@ -123,41 +121,39 @@
 <div class="text-brown"> 
 <!-- ___________ code card 1 ___________ -->
     {% for programme in programmes %}
-    <div class="">    
-        <div class="flex justify-center">
-            <div
-                class=" max-w-sm rounded-lg bg-white shadow-lg">
-                <a href="#!">
-                <img
-                    class="rounded-t-lg"
-                    src="{{programme.image}}"
-                    alt="plantes" />
-                </a>
-                <div class="p-6 text-center">
-                    <div class="my-3">
-                    </div>
-                    <h5
-                      class="mb-2 text-xl font-medium leading-tight">
-                      {{programme.name}}
-                    </h5>
-                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                      {{programme.description}}
-                    </p>
-                    <p class="mb-4 font-semibold">Votre BOX : {{programme.boxtype}} </p>
-                    <p class="mb-4 font-semibold">A partir de : {{programme.price}} €</p>
-                    <button
-                        type="button"
-                        class="inline-block rounded bg-primary px-6 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                        data-te-ripple-init
-                        data-te-ripple-color="light">
+    <section class="md:flex  ">
+      <div class="">    
+          <div class="flex justify-center">
+              <div
+                  class=" max-w-sm rounded-lg bg-white shadow-lg">
+                  <a href="#!">
+                  <img
+                      class="rounded-t-lg"
+                      src="{{programme.image}}"
+                      alt="plantes" />
+                  </a>
+                  <div class="p-6 text-center">
+                      <div class="my-3">
+                      </div>
+                      <h5
+                        class="mb-2 text-xl font-medium leading-tight">
+                        {{programme.name}}
+                      </h5>
+                      <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                        {{programme.description}}
+                      </p>
+                      <p class="mb-4 font-semibold">Votre BOX : {{programme.boxtype}} </p>
+                      <p class="mb-4 font-semibold">A partir de : {{programme.price}} €</p>
+                      <button class="px-4 py-2 bg-green hover:bg-brown text-white rounded-lg">
                         Je me lance
-                    </button>
-                    <div class="my-6"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+                      </button>
 
+                      <div class="my-3"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
     <div class="my-6">
     </div>
     {% endfor %}
