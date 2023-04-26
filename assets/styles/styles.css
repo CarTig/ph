@@ -1,0 +1,75 @@
+@font-face{
+    font-family: 'tomarik';
+    src: url(../fonts/Tomarik-Display.ttf);
+}
+
+@font-face {
+    font-family: 'gustavo';
+    src: url(../fonts/gustavo_regular.ttf);
+}
+
+
+.h1bienvenue {
+    font-family: 'tomarik';
+    color: #52474d;
+}
+
+/* image arrière plan de la section bienvenue */
+.bienvenue {
+    background-image: url(../img/BackgroundCafe.jpg) ;
+    height: auto;
+    
+} 
+
+.animation{
+    transition: ease-in-out 0.3s;
+}
+
+.animation:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.coaching{
+    background-image: url(../img/feuillesVertes.jpg);
+}
+
+nav{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 5;
+}
+
+.cartes .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top:50px
+  }
+
+
+/* style tablette */
+@media screen and (min-width:641) and (max-width:1007) {
+    .bienvenue {
+        height: 600px;
+    } 
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+/* style écran fixe */
+@media screen and (min-width:1008) {
+    .bienvenue {
+        background-color: blue;
+        background-image: none;
+        height: 1000px;
+    } 
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+}

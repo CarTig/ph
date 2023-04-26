@@ -13,3 +13,4 @@ import './bootstrap';
 
 //element pour tailwind elements
 import 'tw-elements';
+
